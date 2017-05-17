@@ -9,6 +9,7 @@ tagged data will be send to an InfluxDB by default. See below for further config
 Grafana Dashboard for visualization.
 
 ![Example Grafana Dashboard](grafana-dashboard.png)
+[grafana-dashboard.json](grafana-dashboard.json)
 
  
 ```bash
@@ -29,7 +30,7 @@ After building you can run the application directly (It is assumed that InfluxDB
 java -jar target/request-tagging-demo-1.0.0-SNAPSHOT.jar
 ```
 
-If you need further configuration you can set all configuration keys as console parameter.
+If you need further configuration you can set all [configuration keys](https://github.com/CK35/request-tagging/blob/master/core/src/main/java/de/ck35/monitoring/request/tagging/core/RequestTaggingContextConfigurer.java#L16) as console parameter.
 ```bash
 java -jar target/request-tagging-demo-1.0.0-SNAPSHOT.jar --hostName=my-influx-host
 ```

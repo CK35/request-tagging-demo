@@ -983,7 +983,7 @@
               ]
             }
           ],
-          "title": "Server Errors",
+          "title": "Exceptions distribution",
           "type": "grafana-piechart-panel",
           "valueName": "current"
         },
@@ -1069,7 +1069,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Exception Causes",
+          "title": "Exceptions",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -1188,7 +1188,7 @@
               ]
             }
           ],
-          "title": "Total Exceptions per Host",
+          "title": "Total exceptions per host",
           "transform": "timeseries_aggregations",
           "type": "table"
         }
@@ -1209,7 +1209,7 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
+          "selected": true,
           "text": "All",
           "value": "$__all"
         },
@@ -1233,7 +1233,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1263,5 +1263,6 @@
   },
   "timezone": "browser",
   "title": "Request Tagging Demo",
-  "version": 32
+  "version": 33
 }
+
