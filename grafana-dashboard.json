@@ -1,7 +1,3 @@
-    JSON
-    Rohdaten
-    Kopfzeilen
-
 {
   "annotations": {
     "list": []
@@ -1265,4 +1261,3 @@
   "title": "Request Tagging Demo",
   "version": 33
 }
-
