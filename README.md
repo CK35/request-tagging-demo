@@ -13,19 +13,19 @@ Grafana Dashboard for visualization.
 
  
 ```bash
-//This is only required when building with latest request-tagging SNAPSHOT version.
+#This is only required when building with latest request-tagging SNAPSHOT version.
 git clone https://github.com/CK35/request-tagging.git
 cd request-tagging
 mvn clean install
 cd ..
 
-//Now we will clone the actual repository of the demo project.
+#Now we will clone the actual repository of the demo project.
 git clone https://github.com/CK35/request-tagging-demo.git
 cd request-tagging-demo
 mvn clean package
 ```
 
-After building you can run the application directly (It is assumed that InfluxDB is on localhost see demo.properties):
+After building you can run the application directly (It is assumed that InfluxDB is on localhost see [demo.properties](src/main/resources/demo.properties)):
 ```bash
 java -jar target/request-tagging-demo-1.0.0-SNAPSHOT.jar
 ```

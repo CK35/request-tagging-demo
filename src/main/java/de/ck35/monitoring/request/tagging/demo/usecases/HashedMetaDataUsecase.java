@@ -21,7 +21,7 @@ public class HashedMetaDataUsecase implements Usecase {
     @Override
     public void invoke() {
         RequestTagging.get()
-                      .withResourceName("")
+                      .withResourceName("my-hashed-meta-data-usecase")
                       .withHashedMetaData("hashedCustomerNumber", getCustomerNumber());
     }
 
