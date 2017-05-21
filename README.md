@@ -25,7 +25,7 @@ cd request-tagging-demo
 mvn clean package
 ```
 
-After building you can run the application directly (It is assumed that InfluxDB is on localhost see [demo.properties](src/main/resources/demo.properties)):
+After building you can run the application directly (It is assumed that InfluxDB is on localhost see [demo.properties](src/main/resources/demo.properties) and the database "request_data" has been created before):
 ```bash
 java -jar target/request-tagging-demo-1.0.0-SNAPSHOT.jar
 ```
@@ -34,3 +34,19 @@ If you need further configuration you can set all [configuration keys](https://g
 ```bash
 java -jar target/request-tagging-demo-1.0.0-SNAPSHOT.jar --hostName=my-influx-host
 ```
+
+## Send data to Elasticsearch alternatively
+You can also send the request data to an Elasticsearch node. The only thing you need to do is changing the [demo.properties](src/main/resources/demo.properties).
+```properties
+# General configuration
+requestTagging.context.collectorSendDelayDuration=PT10S
+requestTagging.statusConsumer.maxDurationsPerNode=10000
+requestTagging.statusReporter.sendData=true
+
+# Configuration needed to send data to Elasticsearch
+requestTagging.statusReporter.reportFormat=ELASTICSEARCH
+requestTagging.statusReporter.port=9200
+requestTagging.statusReporter.pathPart=/_bulk
+requestTagging.statusReporter.queryPart=
+```
+![elasticsearch-example](elasticsearch-example.png)
